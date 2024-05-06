@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+/* Variaveis modo padrão */
+
 :root {
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
@@ -13,6 +15,8 @@
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/MoonStars.svg);
 }
+
+/* Modo Light */
 
 .light {
   --text-color: black;
@@ -24,6 +28,8 @@
   --switch-bg-url: url(./assets/Sun.svg);
 }
 
+/* Body */
+
 body {
   /*
   background-image: url(./assets/bg-mobile.jpg);
@@ -34,6 +40,7 @@ body {
 
   /*background: color image repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -41,12 +48,16 @@ body * {
   color: var(--text-color);
 }
 
+/* Container */
+
 #container {
   width: 100%;
   max-width: 588px;
   margin: 56px auto 0px;
   padding: 0px 24px;
 }
+
+/* Profile */
 
 #profile {
   padding: 24px;
@@ -64,6 +75,8 @@ body * {
   line-height: 24px;
   font-size: 16px;
 }
+
+/* Switch */
 
 #switch {
   position: relative;
@@ -101,6 +114,7 @@ body * {
 }
 
 /* Lista */
+
 ul {
   list-style: none;
   display: flex;
@@ -127,6 +141,8 @@ ul li a:hover {
   border: 1.5px solid var(--text-color);
 }
 
+/* Social Links */
+
 #social-links {
   display: flex;
   justify-content: center;
@@ -147,9 +163,22 @@ ul li a:hover {
   background: var(--highlight-color);
 }
 
+/* Footer */
+
 footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
   font-weight: 400;
+}
+
+/* Media Queries */
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
